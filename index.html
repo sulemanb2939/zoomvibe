@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoomVibe | Premium Pre-Owned Sneakers in Pakistan</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">ZoomVibe</span>
+                <span class="logo-accent">.</span>
+            </a>
+
+            <div class="mobile-controls">
+                <button class="cart-btn" id="cartBtnMobile">
+                    <i class="fas fa-shopping-cart" style="color: #ffffff;"></i>
+                    <span class="cart-count" style="background: #39FF14; color: #000000;">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="sizes.html">Sizes Guide</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg-elements">
+            <div class="glow-orb primary"></div>
+            <div class="glow-orb secondary"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge">Premium Pre-Owned Collection</div>
+                <h1>Authentic Branded Sneakers <br><span class="gradient-text">— Smart Value</span></h1>
+                <p>Luxury streetwear footwear at unbeatable prices in Pakistan. Step into sustainable sneaker fashion
+                    today.</p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary glow-effect">Shop Now</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Authentic Branded</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-star"></i>
+                        <span>Premium Pre-Owned Quality</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-shoe-prints"></i>
+                        <span>UK Sizes Available</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Ordering</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-sneaker-container">
+                    <img src="assets/hero-sneaker.png" alt="ZoomVibe Premium Sneaker" class="floating-sneaker">
+                    <div class="sneaker-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop / Products Section -->
+    <section id="shop" class="shop-section">
+        <div class="section-header">
+            <h2>Featured <span class="gradient-text">Collection</span></h2>
+            <p>Explore our latest arrivals of premium authentic sneakers.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-container">
+            <div class="filter-group">
+                <label>Brand:</label>
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Puma">Puma</option>
+                    <option value="New Balance">New Balance</option>
+                    <option value="Converse">Converse</option>
+                    <option value="Vans">Vans</option>
+                    <option value="Reebok">Reebok</option>
+                    <option value="Jordan">Jordan</option>
+                </select>
+            </div>
+
+            <div class="filter-group sort-group">
+                <button class="btn-filter active" data-filter="all">All</button>
+                <button class="btn-filter" data-filter="bestseller">Bestsellers</button>
+                <button class="btn-filter" data-filter="new">New Arrivals</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be injected here via JS -->
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items injected via JS -->
+                <div class="empty-cart-msg">Your cart is empty.</div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">Rs. 0</span>
+                </div>
+                <button class="btn btn-primary glow-effect cart-checkout-btn" id="cartCheckoutBtn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+                <button class="btn btn-secondary" id="continueShoppingBtn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Preview Modal -->
+    <div class="preview-modal-overlay" id="previewModal">
+        <div class="preview-modal-content">
+            <button class="close-preview" id="closePreviewBtn"><i class="fas fa-times"></i></button>
+            <div class="preview-img-container" id="previewContainer">
+                <!-- 3D injected image -->
+                <img src="" alt="Sneaker Preview" id="previewImage">
+            </div>
+            <div class="preview-details">
+                <h3 id="previewTitle">Sneaker Name</h3>
+                <p class="preview-brand" id="previewBrand">Brand</p>
+                <p class="preview-price" id="previewPrice">Rs. 0</p>
+
+                <div class="size-selection preview-sizes">
+                    <p>Select UK Size:</p>
+                    <div class="sizes-container" id="previewSizesGrid"></div>
+                </div>
+
+                <p class="error-msg" id="previewErrorMsg">Please select a size first.</p>
+
+                <div class="preview-actions">
+                    <button class="btn btn-outline preview-add-cart disabled" id="previewAddToCartBtn">Add to
+                        Cart</button>
+                    <button class="btn btn-primary glow-effect preview-order-btn disabled" id="previewOrderBtn">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-text">ZoomVibe</span>
+                    <span class="logo-accent">.</span>
+                </a>
+                <p>Authentic Premium Pre-Owned Sneakers</p>
+                <div class="social-links">
+                    <a href="https://tiktok.com/@zoomviberyk" target="_blank" title="TikTok: zoomviberyk"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/923040022244" target="_blank" title="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> 0313-9045837</li>
+                    <li><i class="fas fa-phone-alt"></i> 0304-0022244</li>
+                    <li><i class="fab fa-whatsapp"></i> WhatsApp: 0304-0022244</li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Rahim Yar Khan, Pakistan</li>
+                    <li><i class="fas fa-clock"></i> Hours: 3:00 PM – 7:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ZoomVibe. All Rights Reserved. Smart Luxury Footwear.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923040022244" target="_blank" class="floating-wa-btn" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>
